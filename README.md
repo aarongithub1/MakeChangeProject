@@ -1,5 +1,7 @@
 # Make Change Project
 
+## By Aaron Ipp
+
 First week project for Skill Distillery.
 Demonstrates:
 *Basic Java Language skills.
