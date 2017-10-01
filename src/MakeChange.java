@@ -4,7 +4,7 @@ public class MakeChange {
 	public static void main(String[] args) {
 		Scanner kb = new Scanner(System.in);
 		double itemPrice = 0.0, amntGiven = 0.0, totalchangeDue = 0.0, coinsDue = 0;
-		double convertChange = 0.0, convertBills = 0.0;
+		//double convertChange = 0.0, convertBills = 0.0;
 		int billsDue = 0;
 		
 
@@ -32,43 +32,59 @@ public class MakeChange {
 			
 			int count = 0;
 			
+			
 			count = billsDue / 20;
+			if (count > 0) {
 			System.out.println("\nchange is " + count + " $20 Dollar bills");
 			billsDue %= 20;
+			}
 			
 			count = billsDue / 10;
+			if (count > 0) {
 			System.out.println("change is " + count + " $10 Dollar bills");
 			billsDue %= 10;
+			}
 			
 			count = billsDue / 5;
+			if (count > 0) {
 			System.out.println("change is " + count + " $5 Dollar bills");
 			billsDue %= 5;
+			}
 			
 			count = billsDue / 1;
+			if (count > 0) {
 			System.out.println("change is " + count + " $1 Dollar bills");
 			billsDue %= 1;
+			}
 			
 			
 			// amount due minus the whole number amount
-			
 			coinsDue = (totalchangeDue + 0.005) - (int)totalchangeDue;
 			coinsDue *= 100;
 			
 			count = (int)coinsDue / 25;
-			System.out.println("change is " + count + " Quarters");
+			if (count > 0) {
+			System.out.println("change is " + count + " Quarter(s)");
 			coinsDue %= 25;
+			}
 			
 			count = (int)coinsDue / 10;
-			System.out.println("change is " + count + " Dimes");
+			if (count > 0) {
+			System.out.println("change is " + count + " Dime(s)");
 			coinsDue %= 10;
+			}
 			
 			count = (int)coinsDue / 5;
-			System.out.println("change is " + count + " Nickles");
+			if (count > 0) {
+			System.out.println("change is " + count + " Nickle(s)");
 			coinsDue %= 5;
+			}
 			
 			count = (int)coinsDue / 1;
-			System.out.println("change is " + count + " Pennies");
+			if (count > 0) {
+			System.out.println("change is " + count + " Pennie(s)");
 			coinsDue %= 1;
+			}
 			
 		} while (true);
 		
